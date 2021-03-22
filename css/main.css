@@ -763,12 +763,12 @@ h6{
 	margin-right: 24px;
 }
 
-/* .inspiration-slider-image{
-
-} */
-
-.next{
+.next-btn{
+	font-family: inherit;
+	font-size: 20px;
 	padding: 12px;
 	background-color: red;
 	color: white;
+	border: none;
+	cursor: pointer;
 }
