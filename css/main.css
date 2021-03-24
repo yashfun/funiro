@@ -654,11 +654,11 @@ h6{
 	display: flex;
 	flex-wrap: wrap;
 	min-height: 600px;
+	position: relative;
 }
 
 .inspiration-content{
 	flex: 0 1 33.333%;
-	margin-right: 24px;
 	position: relative;
 	z-index: 1;
 	background-color: #FCF8F3;
@@ -669,8 +669,9 @@ h6{
 }
 
 .inspiration-slider{
-	flex: 0 1 33.333%;
+	flex: 0 1 calc(33.333% - 24px);
 	overflow: visible;
+	position: relative;
 }
 
 .inspiration-title{
@@ -702,14 +703,14 @@ h6{
 
 .inspiration-slider-item{
 	height: calc(100% - 80px);
-	width: 100%;
+	flex: 1 0 100%;
 	min-height: 384px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	position: relative;
 	counter-increment: li;
-	margin-right: 24px;
+	margin-left: 24px;
 	transition: height .5s;
 }
 
@@ -783,4 +784,79 @@ h6{
 
 .inspiration-slider-item .item-link span{
 	color: var(--w);
+}
+
+.inspiration-slider .slider-btn{
+	position: absolute;
+	left: calc(200% - 24px);
+	top: calc(50% - 40px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: var(--w);
+	box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+	transform: translateY(-50%);
+}
+
+.inspiration-slider .slider-btn span{
+	color: var(--prim);
+	transform: rotate(180deg);
+}
+
+.slider-nav{
+	position: absolute;
+	bottom: 30px;
+	left: calc(100% + 56px);
+	margin: 0;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.slider-nav > *{
+	padding-left: 0;
+}
+
+.slider-nav > * > *{
+	background: none;
+	overflow: visible;
+	transition: none;
+}
+
+.slider-nav > * > :hover{
+	background-color: var(--prim);
+}
+
+.slider-nav li{
+	margin-right: 20px;
+}
+
+.slider-nav li a{
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	background-color: var(--g5);
+	padding: 0;
+}
+
+.slider-nav li.uk-active a{
+	background-color: var(--prim);
+	border: none;
+	position: relative;
+
+}
+
+.slider-nav li.uk-active a::before{
+	content: "";
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	border: 1px solid var(--prim);
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
 }
