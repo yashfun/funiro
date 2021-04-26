@@ -5,130 +5,84 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lora:wght@400;600;700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/uikit.min.css">
-	<link rel="stylesheet" href="css/modern-normalize.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Окна Стиль</title>
+	<title>Frispes</title>
 </head>
 
 <body>
-	<header>
-		<a class="logo" href="#"><img src="img/logo.svg" alt=""></a>
-		<a href="" class="header-phone">+7 (8482) 98-76-54 <span>Тольятти</span></a>
-		<a href="" class="header-phone">+7 (8462) 76-98-54 <span>Самара</span></a>
-	</header>
-	<aside>
-		<nav>
-			<li class="nav-item submenu">
-				<a href="" class="nav-link">Продукция</a>
-				<ul class="submenu-list">
-					<li>
-						<a href="" class="submenu-link">Окна и двери</a>
-						<ul>
-							<li>
-								<a href="" class="submenu-link">Пластиковые</a>
-							</li>
-							<li>
-								<a href="" class="submenu-link">Деревянные</a>
-							</li>
-							<li>
-								<a href="" class="submenu-link">Алюминиевые</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="" class="submenu-link">Стеклянные перегородки</a>
-					</li>
-					<li>
-						<a href="" class="submenu-link">Безрамное остекление</a>
-					</li>
-				</ul>
+	<header class="header container">
+		<a class="logo" href="#"><img src="img/logo.svg" alt="Logo"></a>
+		<nav class="header__nav">
+			<li class="header__nav-item">
+				<a href="#" class="header__nav-link">Home</a>
 			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Комплектующие</a>
+			<li class="header__nav-item">
+				<a href="#" class="header__nav-link">Workspace</a>
 			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Услуги</a>
+			<li class="header__nav-item">
+				<a href="#" class="header__nav-link">Service</a>
 			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Наши работы</a>
+			<li class="header__nav-item">
+				<a href="#" class="header__nav-link">Events</a>
 			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Отзывы</a>
+			<li class="header__nav-item">
+				<a href="#" class="header__nav-link">Reviews</a>
 			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">О компании</a>
-			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Преимущества</a>
-			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Контакты</a>
+			<li class="header__nav-item">
+				<a href="#" class="header__nav-link">Contact Us</a>
 			</li>
 		</nav>
-		<div class="copy">
-			<p>
-				© 2021 Компания «Logo»
-				Все права защищены <a href="#">Политика конфиденциальности</a>
+		<div class="header__account">
+			<a class="header__account-login" href="">Log In</a>
+			<a class="header__account-signup" href="">Sign Up</a>
+		</div>
+	</header>
+	<section class="hero container">
+		<div class="hero__content">
+			<div class="hero__content-title">
+				<p class="sup-title">Introducing</p>
+				<h1>
+					<span>Revolutionary </span>co-working space to realize your innovation
+				</h1>
+			</div>
+			<p class="hero__content-text">
+				In frispes, we spearhead new initiatives and provide mentorship to a new startup, and help grow their
+				opportunities in key local, regional and global markets
 			</p>
 		</div>
-	</aside>
-	<main>
-		<div class="baner" uk-slideshow="autoplay: true; animation: push; max-height: 450">
-			<ul class="uk-slideshow-items">
-				<li>
-					<img src="img/banner-1.jpg" alt="" uk-cover>
-					<div class="uk-position-center-left">
-						<h2 class="baner-title" uk-slideshow-parallax="x: 300,0,-100; opacity: 1,1,0">
-							Качественные двери ПВХ 100% защита от шума и сквозняков
-						</h2>
-					</div>
-				</li>
-				<li>
-					<img src="img/banner-2.jpg" alt="" uk-cover>
-					<div class="uk-position-center-left">
-						<h2 class="baner-title" uk-slideshow-parallax="x: 300,0,-100; opacity: 1,1,0">
-							Остекление балконов и лоджий под ключ
-						</h2>
-					</div>
-				</li>
-				<li>
-					<img src="img/banner-3.jpg" alt="" uk-cover>
-					<div class="uk-position-center-left">
-						<h2 class="baner-title" uk-slideshow-parallax="x: 300,0,-100; opacity: 1,1,0">
-							Акция «Дизайнерские решения для Ваших окон»
-						</h2>
-					</div>
-				</li>
-			</ul>
-			<ul class="baner-dots uk-slideshow-nav uk-dotnav"></ul>
+		<div class="hero__search">
+			<form class="hero__form" action="">
+				<h3 class="hero__form-title">
+					Find your space now
+				</h3>
+				<label class="hero__form-label">
+					<span>Location</span>
+					<select class="hero__form-input" id="hero-location-select">
+						<option value="Malang, Indonesia">Malang, Indonesia</option>
+						<option value="Moscow, Russia">Moscow, Russia</option>
+						<option value="New York, USA">New York, USA</option>
+					</select>
+				</label>
+				<label class="hero__form-label">
+					<span>Type</span>
+					<select class="hero__form-input" id="hero-type-select">
+						<option value="Private Office">Private Office</option>
+						<option value="Co-working">Co-working</option>
+					</select>
+				</label>
+				<label class="hero__form-label">
+					<span>Date</span>
+					<input class="hero__form-input" type="date">
+				</label>
+				<button class="btn">find my space</button>
+			</form>
+			<div class="hero__search-slideshow"></div>
 		</div>
-		<section class="products">
-			<ul>
-				<li>
-					<h3>
-						Пластиковые окна и двери
-					</h3>
-					<img class="arrow" src="img/round-arrow-1.svg" alt="">
-					<div class="item-bg" style="background: linear-gradient(90deg, rgba(226, 231, 233, 1) 10%, rgba(226, 231, 233, .5) 60%, rgba(226, 231, 233, 0) 100%), url(img/products-01.jpg);"></div>
-				</li>
-				<li>
-					<h3>
-						Деревянные окна и двери
-					</h3>
-					<img class="arrow" src="img/round-arrow-1.svg" alt="">
-					<div class="item-bg" style="background: linear-gradient(90deg, rgba(226, 231, 233, 1) 10%, rgba(226, 231, 233, .5) 60%, rgba(226, 231, 233, 0) 100%), url(img/products-02.jpg);"></div>
-				</li>
-				<li>
-					<h3>
-						Алюминиевые окна и двери
-					</h3>
-					<img class="arrow" src="img/round-arrow-1.svg" alt="">
-					<div class="item-bg" style="background: linear-gradient(90deg, rgba(226, 231, 233, 1) 10%, rgba(226, 231, 233, .5) 60%, rgba(226, 231, 233, 0) 100%), url(img/products-03.jpg);"></div>
-				</li>
-			</ul>
-		</section>
-	</main>
+	</section>
 	<script src="js/uikit.min.js"></script>
 </body>
 
